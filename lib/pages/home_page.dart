@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_atividade/pages/segunda_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -21,12 +22,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       body: Column(
         children: [
@@ -100,7 +95,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(Colors.orange),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SecondPage(),
+                        ),
+                      );
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [Text(style: TextStyle(fontSize: 20), "Login")],
