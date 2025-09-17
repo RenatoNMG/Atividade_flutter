@@ -30,15 +30,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Column(
         children: [
-          Icon(Icons.brightness_7),
+          SizedBox(height: 100),
+          Icon(Icons.brightness_7, size: 100, color: Colors.orange),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 150),
+            padding: const EdgeInsets.symmetric(vertical: 60),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 120),
+                    SizedBox(height: 5),
                     Text(
                       "Renato ",
                       style: TextStyle(
@@ -75,19 +76,29 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: "Senha",
                     ),
                   ),
                 ),
+
+                Padding(
+                  padding: const EdgeInsets.only(right: 25, top: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [Text("Esqueci Minha Senha")],
+                  ),
+                ),
+
                 SizedBox(height: 50),
                 SizedBox(
                   width: 150,
                   height: 50,
                   child: ElevatedButton(
                     style: ButtonStyle(
-                       backgroundColor: WidgetStatePropertyAll(Colors.orange),
+                      backgroundColor: WidgetStatePropertyAll(Colors.orange),
                     ),
                     onPressed: () {},
                     child: Row(
