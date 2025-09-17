@@ -30,6 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Column(
         children: [
+          Icon(Icons.brightness_7),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 150),
             child: Column(
@@ -37,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 50),
+                    SizedBox(height: 120),
                     Text(
                       "Renato ",
                       style: TextStyle(
@@ -48,22 +49,57 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Text(
                       "Navaro",
-                      style: TextStyle(fontSize: 35, fontWeight: FontWeight.w900),
+                      style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.w900,
+                      ),
                     ),
-                    
                   ],
-                  
                 ),
                 SizedBox(height: 20),
-                Text("Bem Vindo",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)
-                )
+                Text(
+                  "Bem Vindo",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900),
+                ),
+                SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: "Email",
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: "Senha",
+                    ),
+                  ),
+                ),
+                SizedBox(height: 50),
+                SizedBox(
+                  width: 150,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                       backgroundColor: WidgetStatePropertyAll(Colors.orange),
+                    ),
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text(style: TextStyle(fontSize: 20), "Login")],
+                    ),
+                  ),
+                ),
               ],
-              
             ),
           ),
         ],
-        
       ),
     );
   }
