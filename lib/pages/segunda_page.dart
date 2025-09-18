@@ -55,7 +55,7 @@ class SecondPage extends StatelessWidget {
           ),
 
           Container(
-            padding: EdgeInsets.only(top: 50),
+            padding: EdgeInsets.only(top: 50, bottom: 50),
             color: const Color.fromARGB(255, 124, 124, 124),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -142,6 +142,24 @@ class SecondPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              width: 150,
+              height: 50,
+              child: ElevatedButton(onPressed: () {}, child: Text("Editar Perfil", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.orange),)),
+            ),
+            Container(
+              width: 150,
+              height: 50,
+              child: ElevatedButton(onPressed: () {}, child: Text("Sair", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),)),
+            ),
+          ],
+        ),
       ),
     );
   }
