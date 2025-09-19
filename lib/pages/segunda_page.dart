@@ -143,22 +143,25 @@ class SecondPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              width: 150,
-              height: 50,
-              child: ElevatedButton(onPressed: () {}, child: Text("Editar Perfil", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.orange),)),
-            ),
-            Container(
-              width: 150,
-              height: 50,
-              child: ElevatedButton(onPressed: () {}, child: Text("Sair", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),)),
-            ),
-          ],
+      bottomNavigationBar: Container(
+        color: Colors.blueGrey,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                width: 150,
+                height: 50,
+                child: ElevatedButton(onPressed: () {}, child: Text("Editar Perfil", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.orange),)),
+              ),
+              Container(
+                width: 150,
+                height: 50,
+                child: ElevatedButton(onPressed: () {}, child: Text("Sair", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),)),
+              ),
+            ],
+          ),
         ),
       ),
     );
