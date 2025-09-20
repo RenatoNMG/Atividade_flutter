@@ -6,6 +6,7 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white70,
       appBar: AppBar(
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
         backgroundColor: Colors.white,
@@ -20,17 +21,20 @@ class SecondPage extends StatelessWidget {
                 Center(
                   child: Container(
                     width: 170,
+
+                    
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(150),
                       border: Border.all(
-                        color: const Color.fromARGB(255, 102, 102, 102),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         width: 8,
                       ),
                     ),
+
+
+
                     child: Center(
-                      child: Container(
-                        child: Icon(Icons.person_3_sharp, size: 150),
-                      ),
+                      child: Container(child: Icon(Icons.person, size: 150)),
                     ),
                   ),
                 ),
@@ -56,7 +60,6 @@ class SecondPage extends StatelessWidget {
 
           Container(
             padding: EdgeInsets.only(top: 50, bottom: 50),
-            color: const Color.fromARGB(255, 124, 124, 124),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -143,26 +146,19 @@ class SecondPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        color: Colors.blueGrey,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                width: 150,
-                height: 50,
-                child: ElevatedButton(onPressed: () {}, child: Text("Editar Perfil", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.orange),)),
-              ),
-              Container(
-                width: 150,
-                height: 50,
-                child: ElevatedButton(onPressed: () {}, child: Text("Sair", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),)),
-              ),
-            ],
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Inicio",
+            backgroundColor: Colors.amberAccent,
           ),
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_2_outlined),
+            label: "Perfil",
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.message), label: "mensagem"),
+        ],
       ),
     );
   }
